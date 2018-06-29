@@ -10,7 +10,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "context (server)",
         "controller (client)",
         "controller (server)",
-        "db (server)",
         "hooks (server)",
         "main (server)",
         "packager (server)",

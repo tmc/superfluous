@@ -12,13 +12,8 @@ module.exports = {
   max_http_sockets: 1000,
   max_https_sockets: 1000,
   require_https: true,
-  backend: {
-    driver: "mongo",
-    db_url: "mongodb://localhost:27017"
-
-  },
+  backend: {},
   slog: true,
-  mongo_store: true,
   blog_root: "app/glossary",
   use_cls: true,
   email_comments_to: ["okay.zed@gmail.com"],

@@ -13,17 +13,7 @@ module.exports = {
     console.log("Main setup stuff, something, something");
   },
   setup_store: function() {
-    if (config.mongo_store) {
-      var session = require('express-session');
-
-      var package_json = require_core("../package.json");
-      var app_name = package_json.name;
-      var url = config.backend && config.backend.db_url;
-      var MongoStore = require('connect-mongo')(session);
-      var store = new MongoStore({url: url, db: app_name, auto_reconnect: true } );
-      require_core("server/store").set(store);
-      return true;
-    }
+    store.install();
   },
   setup_request: function(req) {
     // Filter out logging packager requests
